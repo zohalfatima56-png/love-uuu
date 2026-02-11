@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f7d6e0, #e2c6f7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.background::before {
+  content: "💖 ✨ 💕 ⭐ 💜 💗";
+  position: fixed;
+  font-size: 22px;
+  opacity: 0.15;
+  animation: float 15s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-100vh); }
+}
+
+.container {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.6s ease;
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #9c27b0;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  margin-bottom: 20px;
+}
+
+.box {
+  background: #f9f0ff;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.box span {
+  font-size: 40px;
+  font-weight: 600;
+  color: #9c27b0;
+}
+
+.message {
+  margin-top: 15px;
+  color: #7b1fa2;
+}
+
+.gift-card {
+  background: linear-gradient(45deg, #ff4da6, #9c27b0);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.4s;
+}
+
+.gift-card:hover {
+  transform: scale(1.05);
+}
+
+.gift {
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.birthday-message {
+  color: #6a1b9a;
+  line-height: 1.8;
+}
+
+.footer {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #e91e63;
+}
+
+.hidden {
+  display: none;
+}
+
+#midnightFlash {
+  position: fixed;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg,#ff4da6,#9c27b0);
+  padding: 40px;
+  border-radius: 20px;
+  animation: flash 2s ease;
+  z-index: 10;
+}
+
+@keyframes flash {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+@media(max-width:480px){
+  #midnightFlash {
+    font-size: 28px;
+    padding: 20px;
+  }
+}
